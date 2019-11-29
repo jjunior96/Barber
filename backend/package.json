@@ -1,0 +1,11 @@
+{
+  "name": "Barber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jjunior96/Barber.git",
+  "author": "Junior Alves <jjalves96@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
