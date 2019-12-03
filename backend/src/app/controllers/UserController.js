@@ -4,7 +4,11 @@ module.exports = {
   async store(req, res) {
     const { name, lastname, email, password } = req.body;
 
-    const user = await User.create({ name, lastname, email, password });
+    let user = await User.findOne({ email });
+
+    if (!user) {
+      user = await User.create({ name, lastname, email, password });
+    }
 
     return res.json(user);
   },
