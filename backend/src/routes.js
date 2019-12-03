@@ -1,6 +1,10 @@
 import { Router } from 'express';
 import mongoose from 'mongoose';
 
+// import mongoConnection from './database/index';
+
+import UserController from './app/controllers/UserController';
+
 const routes = new Router();
 
 mongoose.connect(
@@ -11,8 +15,6 @@ mongoose.connect(
   }
 );
 
-routes.get('/', (req, res) => {
-  return res.json({ ok: 'true' });
-});
+routes.post('/users', UserController.store);
 
 export default routes;
